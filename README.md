@@ -9,11 +9,11 @@ LannisterPay uses a custom fee configuration spec (FCS) to describe applicable f
 # Fee Configuration Spec (FCS)
 The LannisterPay custom FCS defines (line by line) fee entries that can be applied to a given transaction. An example is shared below:
 
- -LNPY1221 NGN LOCL CREDIT-CARD(*) : APPLY PERC 1.4
- -LNPY1222 NGN INTL CREDIT-CARD(MASTERCARD) : APPLY PERC 3.8
- -LNPY1223 NGN INTL CREDIT-CARD(*) : APPLY PERC 5.8
- -LNPY1224 NGN LOCL USSD(MTN) : APPLY FLAT_PERC 20:0.5
- -LNPY1225 NGN LOCL USSD(*) : APPLY FLAT_PERC 20:0.5 
+ - LNPY1221 NGN LOCL CREDIT-CARD(*) : APPLY PERC 1.4
+ - LNPY1222 NGN INTL CREDIT-CARD(MASTERCARD) : APPLY PERC 3.8
+ - LNPY1223 NGN INTL CREDIT-CARD(*) : APPLY PERC 5.8
+ - LNPY1224 NGN LOCL USSD(MTN) : APPLY FLAT_PERC 20:0.5
+ - LNPY1225 NGN LOCL USSD(*) : APPLY FLAT_PERC 20:0.5 
 
  
 # Basic FCS (Single Line) Syntax
