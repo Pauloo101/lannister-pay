@@ -1,22 +1,23 @@
 # Lannister-Pay
-# run
-  node main.js
-# Payment processing involves several components / services. One of such is determining the processing fee to charge per transaction. This assessment is about implementing an NGN (Nigerian Naira) fee processing service for a fictional Payment Processor (LannisterPay).
+`Payment processing involves several components / services. One of such is determining the processing fee to charge per transaction. This assessment is about implementing an NGN (Nigerian Naira) fee processing service for a fictional Payment Processor (LannisterPay).`
 
 LannisterPay uses a custom fee configuration spec (FCS) to describe applicable fees.
+# run
+`node main.js`
+ 
 
 # Fee Configuration Spec (FCS)
 The LannisterPay custom FCS defines (line by line) fee entries that can be applied to a given transaction. An example is shared below:
 
-# LNPY1221 NGN LOCL CREDIT-CARD(*) : APPLY PERC 1.4
-# LNPY1222 NGN INTL CREDIT-CARD(MASTERCARD) : APPLY PERC 3.8
-# LNPY1223 NGN INTL CREDIT-CARD(*) : APPLY PERC 5.8
-# LNPY1224 NGN LOCL USSD(MTN) : APPLY FLAT_PERC 20:0.5
-# LNPY1225 NGN LOCL USSD(*) : APPLY FLAT_PERC 20:0.5
+ **LNPY1221 NGN LOCL CREDIT-CARD(*) : APPLY PERC 1.4
+ LNPY1222 NGN INTL CREDIT-CARD(MASTERCARD) : APPLY PERC 3.8
+ LNPY1223 NGN INTL CREDIT-CARD(*) : APPLY PERC 5.8
+ LNPY1224 NGN LOCL USSD(MTN) : APPLY FLAT_PERC 20:0.5
+ LNPY1225 NGN LOCL USSD(*) : APPLY FLAT_PERC 20:0.5 **
 
  
 # Basic FCS (Single Line) Syntax
-# {FEE-ID} {FEE-CURRENCY} {FEE-LOCALE} {FEE-ENTITY}({ENTITY-PROPERTY}) : APPLY {FEE-TYPE} {FEE-VALUE}
+`{FEE-ID} {FEE-CURRENCY} {FEE-LOCALE} {FEE-ENTITY}({ENTITY-PROPERTY}) : APPLY {FEE-TYPE} {FEE-VALUE}`
 
 # EndPoints
   ## /fee method(post)
@@ -26,9 +27,8 @@ The LannisterPay custom FCS defines (line by line) fee entries that can be appli
 
   ## /compute-transaction-fee method(post)
 
-  # Sample Payload
-  ""
-  {
+  **Sample Payload**
+ ` {
     "ID": 91203,
     "Amount": 5000,
     "Currency": "NGN",
@@ -48,6 +48,4 @@ The LannisterPay custom FCS defines (line by line) fee entries that can be appli
         "Type": "CREDIT-CARD",
         "Country": "NG"
     }
-}
-
-  ""
+}`
